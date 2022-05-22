@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Indie+Flower&family=Poppins:wght@500;600;700&family=Shadows+Into+Light&display=swap');
+
+/* font-family: 'Courgette', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Poppins', sans-serif; */
+
+
+:root {
+    --main-color: #86f6f6;
+    --dark: #225858;
+    --darker: #0f2929;
+    --light: #c0f1f1;
+    --blue: #2090d0;
+    --red: #e02a2a;
+    --gray: #bbb6b6;
+    --tp: #2ae0e095;
+    --tps: #86f6f6ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+span {
+    color: var(--blue);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--darker);
+    color: var(--light);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome {
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+section:nth-child(even) {
+    background: var(--light);
+    color: var(--darker);
+}
+
+.circle{
+    background: url(../img/img4.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    animation: circle 6s infinite;
+}
+
+@keyframes circle {
+    0%, 100% {
+        transform: rotate(8deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+}
+
+.welcome-msg {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.msg1 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.p1, .p2 {
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+    text-align: justify;
+    margin: 10px auto 50px;
+}
+
+.pic {
+    background: url(../img/img12.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    animation: circle 6s infinite;
+}
+
+.p3 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 30px;
+}
+
+.pic1 {
+    background: url(../img/img2.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 20px auto 0;
+    margin-bottom: 100px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    animation: circle 6s infinite;
+}
+
+.p4 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 23px;
+    letter-spacing: 2px;
+    padding-top: 15vh;
+    margin-bottom: 10px;
+}
+
+.p5 {
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+}
+
+#btn {
+    border: 2px solid var(--tp);
+    border-radius: 6px;
+    width: 250px;
+    padding: 8px 20px;
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--tp);
+    color: var(--light);
+    text-decoration: none;
+}
+
+#btn:active {
+    box-shadow: inset 300px 0 0 0 var(--dark);
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}

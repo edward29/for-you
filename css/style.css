@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Indie+Flower&family=Poppins:wght@500;600;700&family=Shadows+Into+Light&display=swap');
+
+/* font-family: 'Courgette', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Shadows Into Light', cursive; 
+font-family: 'Poppins', sans-serif; */
+
+
+:root {
+    --main-color: #86f6f6;
+    --dark: #225858;
+    --darker: #0b2e2e;
+    --light: #c0f1f1;
+    --blue: #2090d0;
+    --red: #e02a2a;
+    --gray: #bbb6b6;
+    --tp: #2ae0e095;
+    --tps: #86f6f6ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: url(../img/img23.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bg{
+    background: var(--tp);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify {
+    background-color: var(--tps);
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px var(--gray),
+    -5px -5px 15px var(--light);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1{
+    background: url(../img/img2.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 10% 50% 50% 50%;
+    transform: translate(-20%, -20%);
+    opacity: .8;
+    animation: b1 6s infinite;
+}
+
+@keyframes b1 {
+    0%, 100% {
+        transform: rotate(-90deg) translateX(1rem);
+    }
+    
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+.box2{
+    background: url(../img/img7.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50% 10% 50% 50%;
+    transform: translate(20%, -20%);
+    opacity: .8;
+    animation: b2 6s infinite;
+}
+
+@keyframes b2 {
+    0%, 100% {
+        transform: rotate(90deg) translateX(-1rem);
+    }
+    
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box3{
+    background: url(../img/img4.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50% 50% 50% 10%;
+    transform: translate(-20%, 20%);
+    opacity: .8;
+    animation: b3 6s infinite;
+}
+
+@keyframes b3 {
+    0%, 100% {
+        transform: rotate(110deg) translateX(1rem);
+    }
+    
+    50% {
+        transform: translateY(1rem);
+    }
+}
+
+.box4{
+    background: url(../img/img15.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50% 50% 10% 50%;
+    transform: translate(20%, 20%);
+    opacity: .8;
+    animation: b4 6s infinite;
+}
+
+@keyframes b4 {
+    0%, 100% {
+        transform: rotate(-110deg) translateX(-1rem);
+    }
+    
+    50% {
+        transform: translateY(1rem);
+    }
+}
+
+.verify > .dicription {
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--dark);
+    padding: 10px 13px;
+    text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 1px -1px #fff;
+}
+
+.verify > .dicription span {
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+.date-format {
+    margin: 50px 10px 0;
+    font-family: 'Courgette', cursive;
+    color: var(--dark);
+    text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 1px -1px #fff;
+}
+
+.date-sample {
+    margin: 0 10px;
+    font-family: 'Courgette', cursive;
+    color: var(--darker);
+    text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 1px -1px #fff;
+}
+
+.verify input {
+    font-family: 'Courgette', cursive;
+    width: 95%;
+    font-size: 23px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px 0;
+    display: block;
+    margin: 5px auto;
+    background: var(--tp);
+    color: var(--dark);
+}
+
+.verify button {
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    width: 50%;
+    display: block;
+    margin: 50px auto;
+    color: var(--light);
+    background: var(--blue);
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all .4s ease-in;
+}
+
+#error {
+    color: var(--red);
+    text-align: center;
+}
+
+.date {
+    font-size: 12px;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
