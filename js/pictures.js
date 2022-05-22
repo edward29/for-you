@@ -110,27 +110,23 @@ function onWndLoad() {
          
           initX =mouseX;
           e.preventDefault();
-          if (Math.abs(transX) >= curSlide.offsetWidth-30) {
+          if (Math.abs(transX) >= curSlide.offsetWidth-120) {
            
               document.removeEventListener('mousemove', slideMouseMove, false);
               document.removeEventListener('touchmove', slideMouseMove, false);
-              curSlide.style.transition = 'ease 0.2s';
+              curSlide.style.transition = 'ease-in 0.2s';
               curSlide.style.opacity = 0;
               prevSlide = curSlide;
               attachEvents(sliders[sliders.length - 2]);
               slideMouseUp();
               setTimeout(function () {
-                 
-               
-                 
-               
                   
-                  slider.insertBefore(prevSlide, slider.firstChild);
-                  
-                  prevSlide.style.transition = 'none';
-                  prevSlide.style.opacity = '1';
-                  slideMouseUp();
-                
+                    slider.insertBefore(prevSlide, slider.firstChild);
+
+                    prevSlide.style.transition = 'none';
+                    prevSlide.style.opacity = '1';
+                    slideMouseUp();
+
               },201);
             
              
@@ -165,28 +161,28 @@ function onWndLoad() {
 
 }
 
-document.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-});
+// document.addEventListener("contextmenu", (e) => {
+//     e.preventDefault();
+// });
 
-document.onkeydown = (e) => {
-    if (event.keyCode == 123) {
-        return false;
-    }
+// document.onkeydown = (e) => {
+//     if (event.keyCode == 123) {
+//         return false;
+//     }
 
-    if (e.ctrlKey && e.shiftKey && e.keyCode === "I".charCodeAt(0)) {
-        return false;  
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode === "C".charCodeAt(0)) {
-        return false;  
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode === "J".charCodeAt(0)) {
-        return false;  
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode === "U".charCodeAt(0)) {
-        return false;  
-    }
-    if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-        return false;  
-    }
-}
+//     if (e.ctrlKey && e.shiftKey && e.keyCode === "I".charCodeAt(0)) {
+//         return false;  
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode === "C".charCodeAt(0)) {
+//         return false;  
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode === "J".charCodeAt(0)) {
+//         return false;  
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode === "U".charCodeAt(0)) {
+//         return false;  
+//     }
+//     if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+//         return false;  
+//     }
+// }
